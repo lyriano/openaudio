@@ -53,13 +53,6 @@ Diretta ASIO as the output path for each application.
 
 ## Beta status and important limits
 
-This is an internal qualification beta. The package is **test-signed**, not
-Microsoft production-signed, and its manifest intentionally reports
-`distribution_ready=false`. The driver therefore requires Windows Test Mode
-and may require Secure Boot to be disabled according to the local Windows
-policy. Test Mode reduces driver-signing protection; use it only on a machine
-you control.
-
 Audio playback currently uses an intentional **approximately 3–4 second
 pre-buffer** before sound begins. This startup delay is part of the current
 qualification design; target/network/DAC startup time is additional.
