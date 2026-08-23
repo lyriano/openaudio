@@ -10,10 +10,11 @@ Always extract the complete ZIP; do not run only a file from `app\`.
 
 ![OpenAudio Bridge](OBA.png)
 
-OpenAudio Bridge is a Windows audio bridge that routes audio from normal
-Windows applications to a Diretta Target through the Diretta Host SDK path.
-It is designed for private listening experiments and qualification, not as a
-commercial product.
+OpenAudio Bridge is a software project that sends audio from Spotify, TIDAL,
+YouTube in a browser, and other Windows apps to a Diretta Target. It runs
+independently of the Diretta ASIO driver, so audio can be sent to a Diretta
+Target without installing Diretta ASIO, while still using the official Diretta
+Host SDK and protocol.
 
 > This repository contains release binaries only. It intentionally does not
 > contain OpenAudio Bridge source code, Diretta SDK headers/libraries, private
