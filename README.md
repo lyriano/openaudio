@@ -5,8 +5,6 @@
 ## Download
 
 Download the beta package from [OpenAudioBridge-v0.004-test.zip](https://github.com/lyriano/openaudio/releases/download/v0.004-beta/OpenAudioBridge-v0.004-test.zip).
-Verify the ZIP against the matching SHA-256 checksum attached to the release
-before extracting.
 
 Always extract the complete ZIP; do not run only a file from `app\`.
 
