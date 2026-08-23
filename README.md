@@ -79,12 +79,10 @@ is not a claim of Diretta certification. It is a personal research build.
 1. Download and extract the complete ZIP to a local folder. The extracted
    folder is only the installer package; do not treat it as the installed
    application.
-2. Check Windows Secure Boot. If it is enabled and Windows blocks the
-   test-signed driver, enter the computer's UEFI/BIOS settings, disable
-   **Secure Boot**, save the change, and restart Windows. The exact menu name
-   varies by motherboard. PowerShell can report the current state with
-   `Confirm-SecureBootUEFI` (`False` means disabled). Do this only on a machine
-   used for testing; restore Secure Boot after removing the beta driver.
+2. If Windows says that the test driver cannot be loaded, restart the computer
+   into its BIOS/UEFI settings, turn off **Secure Boot**, save the change, and
+   restart Windows. The menu name varies by computer. Use this beta only on a
+   test machine, and turn Secure Boot on again after removing the beta driver.
 3. Right-click **Enable OpenAudio Bridge Test Mode.bat** and choose **Run as
    administrator**. Confirm `Y`. Restart Windows when prompted by the script.
    If Test Mode is already enabled, this step can be skipped.
