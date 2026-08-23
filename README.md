@@ -35,8 +35,7 @@ Windows audio application
 
 The gateway uses the Diretta SDK directly. A Diretta ASIO Host driver is not
 required for this route, although another Diretta host path can still be kept
-installed for separate experiments. Do not route the same application through
-two host paths at the same time.
+installed for separate experiments.
 
 ## Why test it
 
