@@ -126,11 +126,7 @@ again. The package never silently changes Test Mode or reboots the machine.
 ## Diretta SDK and personal-use terms
 
 OpenAudio Bridge was built and tested against a locally supplied Diretta Host
-SDK 1.49.x under permission for personal research. The SDK itself is not
-redistributed in this repository or in the ZIP. Each user is responsible for
-having their own right to use the Diretta SDK and for complying with Diretta's
-license and SDK terms. Do not extract, copy, or redistribute Diretta SDK files
-from a development installation.
+SDK 1.49.x for personal research.
 
 This beta is offered for **personal, non-commercial research and testing**.
 It is not sold, licensed as a commercial product, or supported as a production
