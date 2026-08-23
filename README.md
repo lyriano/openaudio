@@ -129,7 +129,6 @@ not responsible for driver problems, Windows policy changes, loss of audio,
 device configuration changes, network faults, hearing damage, or any other
 direct or indirect loss. Keep backups and test at a safe listening level.
 
-
 ## Repository policy
 
 This is a binary-only beta staging repository. No source code or SDK payload is
