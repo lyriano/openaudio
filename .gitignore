@@ -1,0 +1,11 @@
+# This repository is intentionally binary-only. Keep source/build material out.
+*
+!.gitignore
+!README.md
+!OBA.png
+!BETA_TERMS.md
+!SHA256SUMS.txt
+!THIRD_PARTY_NOTICES.txt
+!VERSION.txt
+!releases/
+!releases/*.zip
