@@ -33,9 +33,8 @@ Windows audio application
         -> Diretta Target
 ```
 
-The gateway uses the Diretta SDK directly. A Diretta ASIO Host driver is not
-required for this route, although another Diretta host path can still be kept
-installed for separate experiments.
+The gateway uses the Diretta SDK directly; a Diretta ASIO Host driver is not
+required for this route.
 
 ## Why test it
 
