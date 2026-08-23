@@ -2,6 +2,14 @@
 
 **Binary beta for personal research — version 0.004**
 
+## Download
+
+Download the beta package from [OpenAudioBridge-v0.004-test.zip](https://github.com/lyriano/openaudio/releases/download/v0.004-beta/OpenAudioBridge-v0.004-test.zip).
+Verify the ZIP against the matching SHA-256 checksum attached to the release
+before extracting.
+
+Always extract the complete ZIP; do not run only a file from `app\`.
+
 ![OpenAudio Bridge](OBA.png)
 
 OpenAudio Bridge is a Windows audio bridge that routes audio from normal
@@ -65,14 +73,6 @@ guaranteed on every network/target combination.
 
 The package is not a replacement for a Microsoft-signed production driver and
 is not a claim of Diretta certification. It is a personal research build.
-
-## Download
-
-Download the beta package from [OpenAudioBridge-v0.004-test.zip](https://github.com/lyriano/openaudio/releases/download/v0.004-beta/OpenAudioBridge-v0.004-test.zip).
-Verify the ZIP against the matching SHA-256 checksum attached to the release
-before extracting.
-
-Always extract the complete ZIP; do not run only a file from `app\`.
 
 ## Installation (Windows x64)
 
