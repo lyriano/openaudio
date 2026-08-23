@@ -116,8 +116,7 @@ the package is normally not needed.
 
 The connection selector uses a generated `Target APP 01`, `Target APP 02`, …
 identity for the current discovery snapshot, followed by the DAC/sink name and
-IP when available. The Monitor and diagnostics views retain the native target
-name and complete transport details.
+IP when available.
 
 ## Uninstall / leave Test Mode
 
