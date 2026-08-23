@@ -67,9 +67,10 @@ pre-buffer** before sound begins. This startup delay is part of the current
 qualification design; target/network/DAC startup time is additional.
 
 `Video` mode is experimental and is intended to improve video/audio timing
-alignment. Current beta builds can still have an audio/video timing offset, so
-automatic lip-sync is not guaranteed. Continuous playback is also not
-guaranteed on every network/target combination.
+alignment. When YouTube is played in a web browser, current beta builds can
+still have an audio/video timing offset, so the sound may lead or lag behind
+the picture. Automatic lip-sync is not guaranteed. Continuous playback is
+also not guaranteed on every network/target combination.
 
 The package is not a replacement for a Microsoft-signed production driver and
 is not a claim of Diretta certification. It is a personal research build.
