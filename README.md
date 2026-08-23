@@ -117,8 +117,8 @@ and driver remain installed and Windows starts them when needed.
 
 If the OpenAudio speaker is missing after a reboot, run **Enable OpenAudio
 Bridge Test Mode.bat** as administrator and restart Windows. If it is still
-missing, Secure Boot may have been enabled again; disable Secure Boot in the
-computer's BIOS/UEFI settings as described above, then restart. Reinstalling
+missing, Secure Boot may have been enabled again; **disable Secure Boot in the
+computer's BIOS/UEFI settings as described above**, then restart. Reinstalling
 the package is normally not needed.
 
 The connection selector uses a generated `Target APP 01`, `Target APP 02`, …
