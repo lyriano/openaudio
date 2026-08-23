@@ -68,15 +68,11 @@ is not a claim of Diretta certification. It is a personal research build.
 
 ## Download
 
-Download the current package from the [latest GitHub Release](https://github.com/lyriano/openaudio/releases/latest).
-Each release carries its own versioned ZIP and matching SHA-256 checksum; the
-README intentionally does not hard-code a release filename. Verify the ZIP
-against the checksum attached to that release before extracting.
+Download the beta package from [OpenAudioBridge-v0.004-test.zip](https://github.com/lyriano/openaudio/releases/download/v0.004-beta/OpenAudioBridge-v0.004-test.zip).
+Verify the ZIP against the matching SHA-256 checksum attached to the release
+before extracting.
 
 Always extract the complete ZIP; do not run only a file from `app\`.
-
-For maintainers, this repository also keeps the current staging artifact under
-`releases/`; it is replaced when a new beta is prepared.
 
 ## Installation (Windows x64)
 
