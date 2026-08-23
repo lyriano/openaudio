@@ -76,12 +76,12 @@ is not a claim of Diretta certification. It is a personal research build.
 
 ## Installation (Windows x64)
 
-> **IMPORTANT — Secure Boot**
->
-> This test-signed beta may not load while Secure Boot is enabled. If Windows
-> blocks the driver, enter the computer's **BIOS/UEFI settings**, disable
-> **Secure Boot**, save the change, and restart Windows. Turn Secure Boot on
-> again after removing the beta driver.
+### ⚠️ IMPORTANT: Secure Boot
+
+**This test-signed beta may not load while Secure Boot is enabled.** If Windows
+blocks the driver, enter the computer's **BIOS/UEFI settings**, disable
+**Secure Boot**, save the change, and restart Windows. Turn Secure Boot on
+again after removing the beta driver.
 
 1. Download and extract the complete ZIP to a local folder. The extracted
    folder is only the installer package; do not treat it as the installed
