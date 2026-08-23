@@ -1,6 +1,6 @@
 # OpenAudio Bridge
 
-**Binary beta for personal research — version 0.004**
+**Binary beta — version 0.004**
 
 ## Download
 
@@ -126,7 +126,7 @@ again. The package never silently changes Test Mode or reboots the machine.
 ## Diretta SDK and personal-use terms
 
 OpenAudio Bridge was built and tested against a locally supplied Diretta Host
-SDK 1.49.x for personal research.
+SDK 1.49.x.
 
 This beta is offered for **personal, non-commercial research and testing**.
 It is not sold, licensed as a commercial product, or supported as a production
