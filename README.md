@@ -102,6 +102,20 @@ is not a claim of Diretta certification. It is a personal research build.
 7. In Windows Sound settings, select **Speakers (OpenAudio Bridge)** as the
    output for the application being tested.
 
+## After restarting Windows
+
+The installation is per-machine and persistent. After the required restart,
+do **not** run the installer or the Test Mode script again on every boot.
+Open **OpenAudio Bridge** from the Start menu or desktop shortcut, then select
+**Speakers (OpenAudio Bridge)** in Windows Sound settings. The Gateway service
+and driver remain installed and Windows starts them when needed.
+
+If the OpenAudio speaker is missing after a reboot, run **Enable OpenAudio
+Bridge Test Mode.bat** as administrator and restart Windows. If it is still
+missing, Secure Boot may have been enabled again; disable Secure Boot in the
+computer's BIOS/UEFI settings as described above, then restart. Reinstalling
+the package is normally not needed.
+
 The connection selector uses a generated `Target APP 01`, `Target APP 02`, …
 identity for the current discovery snapshot, followed by the DAC/sink name and
 IP when available. The Monitor and diagnostics views retain the native target
