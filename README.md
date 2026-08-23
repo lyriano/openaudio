@@ -102,22 +102,17 @@ is not a claim of Diretta certification. It is a personal research build.
 
 ### IMPORTANT: Secure Boot
 
-**This test-signed beta may not load while Secure Boot is enabled.** If Windows
-blocks the driver, enter the computer's **BIOS/UEFI settings**, disable
-**Secure Boot**, save the change, and restart Windows. Turn Secure Boot on
-again after removing the beta driver.
+If Windows blocks this test driver, disable **Secure Boot** in the computer's
+**BIOS/UEFI settings**, save the change, and restart Windows. Turn Secure Boot
+on again after removing the beta driver.
 
-The installation is per-machine and persistent. After the required restart,
-do **not** run the installer or the Test Mode script again on every boot.
+After installation, do **not** reinstall or run Test Mode again on every boot.
 Open **OpenAudio Bridge** from the Start menu or desktop shortcut, then select
-**Speakers (OpenAudio Bridge)** in Windows Sound settings. The Gateway service
-and driver remain installed and Windows starts them when needed.
+**Speakers (OpenAudio Bridge)** in Windows Sound settings.
 
-If the OpenAudio speaker is missing after a reboot, run **Enable OpenAudio
-Bridge Test Mode.bat** as administrator and restart Windows. If it is still
-missing, Secure Boot may have been enabled again; **disable Secure Boot in the
-computer's BIOS/UEFI settings as described above**, then restart. Reinstalling
-the package is normally not needed.
+If the speaker is missing after reboot, run **Enable OpenAudio Bridge Test
+Mode.bat** as administrator and restart. If it is still missing, disable Secure
+Boot in BIOS/UEFI and restart.
 
 The connection selector uses a generated `Target APP 01`, `Target APP 02`, …
 identity for the current discovery snapshot, followed by the DAC/sink name and
