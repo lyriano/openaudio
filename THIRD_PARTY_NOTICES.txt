@@ -1,0 +1,7 @@
+OpenAudio Bridge - Third Party Notices
+
+The OpenAudio Windows audio driver contains portions adapted from Microsoft's Windows Driver Samples SimpleAudio sample.
+Those portions are licensed under the Microsoft Public License (MS-PL).
+The corresponding SimpleAudio source license is retained in the OpenAudio source distribution.
+
+No Diretta SDK library or header is redistributed by this package builder. oa_gateway.exe is linked against the locally supplied SDK according to its applicable license.

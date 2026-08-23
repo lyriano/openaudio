@@ -1,1 +1,140 @@
-# openaudio
+# OpenAudio Bridge
+
+**Binary beta for personal research — version 0.004**
+
+![OpenAudio Bridge](OBA.png)
+
+OpenAudio Bridge is a Windows audio bridge that routes audio from normal
+Windows applications to a Diretta Target through the Diretta Host SDK path.
+It is designed for private listening experiments and qualification, not as a
+commercial product.
+
+> This repository contains release binaries only. It intentionally does not
+> contain OpenAudio Bridge source code, Diretta SDK headers/libraries, private
+> signing keys, or developer build files.
+
+## What it does
+
+The beta exposes an **OpenAudio Bridge** Windows playback endpoint. Applications
+such as Spotify, TIDAL, YouTube in a browser, Foobar2000, and other WASAPI
+applications can select that endpoint. The audio path is:
+
+```text
+Windows audio application
+        -> OpenAudio Bridge audio endpoint
+        -> OpenAudio Gateway
+        -> Diretta Host SDK 1.49.x
+        -> Diretta Target
+```
+
+The gateway uses the Diretta SDK directly. A Diretta ASIO Host driver is not
+required for this route, although another Diretta host path can still be kept
+installed for separate experiments. Do not route the same application through
+two host paths at the same time.
+
+## Why test it
+
+- One target route for common Windows music applications.
+- Target discovery with the DAC/sink name and IP address visible in the
+  connection selector.
+- `Music` and experimental `Video` modes.
+- PCM16/24/32 source support where the Windows endpoint and target accept it;
+  the gateway does not deliberately force every source to PCM16. A fallback
+  can occur when the selected target rejects the source wire format.
+- Configurable audio buffering modes for controlled listening tests.
+- **Bit-perfect priority:** the bridge applies no software volume processing or
+  sample attenuation. Adjust listening level at the DAC or amplifier.
+
+## Beta status and important limits
+
+This is an internal qualification beta. The package is **test-signed**, not
+Microsoft production-signed, and its manifest intentionally reports
+`distribution_ready=false`. The driver therefore requires Windows Test Mode
+and may require Secure Boot to be disabled according to the local Windows
+policy. Test Mode reduces driver-signing protection; use it only on a machine
+you control.
+
+Audio playback currently uses an intentional **approximately 3–4 second
+pre-buffer** before sound begins. This startup delay is part of the current
+qualification design; target/network/DAC startup time is additional.
+
+`Video` mode is experimental and is intended to improve video/audio timing
+alignment. Current beta builds can still have an audio/video timing offset, so
+automatic lip-sync is not guaranteed. Continuous playback is also not
+guaranteed on every network/target combination.
+
+The package is not a replacement for a Microsoft-signed production driver and
+is not a claim of Diretta certification. It is a personal research build.
+
+## Download
+
+Download the current package from the [latest GitHub Release](https://github.com/lyriano/openaudio/releases/latest).
+Each release carries its own versioned ZIP and matching SHA-256 checksum; the
+README intentionally does not hard-code a release filename. Verify the ZIP
+against the checksum attached to that release before extracting.
+
+Always extract the complete ZIP; do not run only a file from `app\`.
+
+For maintainers, this repository also keeps the current staging artifact under
+`releases/`; it is replaced when a new beta is prepared.
+
+## Installation (Windows x64)
+
+1. Download and extract the complete ZIP to a local folder.
+2. Right-click **Enable OpenAudio Bridge Test Mode.bat** and choose **Run as
+   administrator**. Confirm `Y`. Restart Windows when prompted by the script.
+   If Test Mode is already enabled, this step can be skipped.
+3. After Windows restarts, right-click **Install OpenAudio Bridge.exe** and
+   choose **Run as administrator**. The installer does not restart Windows by
+   itself.
+4. Open **OpenAudioBridgeControl.exe**.
+5. Select the Ethernet interface, select the intended target, choose `Music`
+   or experimental `Video`, and click **Apply**.
+6. In Windows Sound settings, select **Speakers (OpenAudio Bridge)** as the
+   output for the application being tested.
+
+The connection selector uses a generated `Target APP 01`, `Target APP 02`, …
+identity for the current discovery snapshot, followed by the DAC/sink name and
+IP when available. The Monitor and diagnostics views retain the native target
+name and complete transport details.
+
+## Uninstall / leave Test Mode
+
+Use **Uninstall OpenAudio Bridge.exe** as administrator. After testing, run
+**Disable OpenAudio Bridge Test Mode.bat** as administrator and restart Windows
+again. The package never silently changes Test Mode or reboots the machine.
+
+## Diretta SDK and personal-use terms
+
+OpenAudio Bridge was built and tested against a locally supplied Diretta Host
+SDK 1.49.x under permission for personal research. The SDK itself is not
+redistributed in this repository or in the ZIP. Each user is responsible for
+having their own right to use the Diretta SDK and for complying with Diretta's
+license and SDK terms. Do not extract, copy, or redistribute Diretta SDK files
+from a development installation.
+
+This beta is offered for **personal, non-commercial research and testing**.
+It is not sold, licensed as a commercial product, or supported as a production
+audio driver. See [`BETA_TERMS.md`](BETA_TERMS.md) for the complete beta notice.
+
+## Disclaimer
+
+Use at your own risk. The software is provided for testing **without warranty
+of any kind**, including reliability, compatibility, availability, audio
+quality, data integrity, or fitness for a particular purpose. The author is
+not responsible for driver problems, Windows policy changes, loss of audio,
+device configuration changes, network faults, hearing damage, or any other
+direct or indirect loss. Keep backups and test at a safe listening level.
+
+Please report the version, Windows build, target model, network topology, and
+`Diagnostics\diagnose_openaudio_bridge.ps1` output with any beta report. Do not
+include private IPs, certificates, SDK files, or personal data unless you have
+removed them first.
+
+## Repository policy
+
+This is a binary-only beta staging repository. No source code or SDK payload is
+intended to be published here. Release artifacts are test-signed and protected
+for internal qualification; production distribution requires a separate
+Microsoft-signed driver catalog, production Authenticode certificates, and a
+new qualification gate.
