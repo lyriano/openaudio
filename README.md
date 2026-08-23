@@ -79,21 +79,27 @@ is not a claim of Diretta certification. It is a personal research build.
 1. Download and extract the complete ZIP to a local folder. The extracted
    folder is only the installer package; do not treat it as the installed
    application.
-2. Right-click **Enable OpenAudio Bridge Test Mode.bat** and choose **Run as
+2. Check Windows Secure Boot. If it is enabled and Windows blocks the
+   test-signed driver, enter the computer's UEFI/BIOS settings, disable
+   **Secure Boot**, save the change, and restart Windows. The exact menu name
+   varies by motherboard. PowerShell can report the current state with
+   `Confirm-SecureBootUEFI` (`False` means disabled). Do this only on a machine
+   used for testing; restore Secure Boot after removing the beta driver.
+3. Right-click **Enable OpenAudio Bridge Test Mode.bat** and choose **Run as
    administrator**. Confirm `Y`. Restart Windows when prompted by the script.
    If Test Mode is already enabled, this step can be skipped.
-3. After Windows restarts, right-click **Install OpenAudio Bridge.exe** and
+4. After Windows restarts, right-click **Install OpenAudio Bridge.exe** and
    choose **Run as administrator**. The installer copies the application to
    `%ProgramFiles%\OpenAudio\Bridge`, registers the driver and Gateway service,
    and creates **OpenAudio Bridge** shortcuts in the Windows Start menu and on
    the desktop. The installer does not restart Windows by itself.
-4. Launch **OpenAudio Bridge** from the Windows Start menu or its desktop
+5. Launch **OpenAudio Bridge** from the Windows Start menu or its desktop
    shortcut. Do not launch `OpenAudioBridgeControl.exe` from the extracted ZIP;
    that copy is only the installer source. If a shortcut was not created, use
    the installed copy at `%ProgramFiles%\OpenAudio\Bridge\OpenAudioBridgeControl.exe`.
-5. Select the Ethernet interface, select the intended target, choose `Music`
+6. Select the Ethernet interface, select the intended target, choose `Music`
    or experimental `Video`, and click **Apply**.
-6. In Windows Sound settings, select **Speakers (OpenAudio Bridge)** as the
+7. In Windows Sound settings, select **Speakers (OpenAudio Bridge)** as the
    output for the application being tested.
 
 The connection selector uses a generated `Target APP 01`, `Target APP 02`, …
