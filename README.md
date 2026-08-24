@@ -43,7 +43,7 @@ Diretta ASIO as the output path for each application.
 - One target route for common Windows music applications.
 - Target discovery with the DAC/sink name and IP address visible in the
   connection selector.
-- `Music` and experimental `Video` modes.
+- `Music` and `Video` modes.
 - PCM16/24/32 source support where the Windows endpoint and target accept it;
   the gateway does not deliberately force every source to PCM16. A fallback
   can occur when the selected target rejects the source wire format.
@@ -56,12 +56,6 @@ Diretta ASIO as the output path for each application.
 Audio playback currently uses an intentional **approximately 3–4 second
 pre-buffer** before sound begins. This startup delay is part of the current
 qualification design; target/network/DAC startup time is additional.
-
-`Video` mode is experimental and is intended to improve video/audio timing
-alignment. When YouTube is played in a web browser, current beta builds can
-still have an audio/video timing offset, so the sound may lead or lag behind
-the picture. Automatic lip-sync is not guaranteed. Continuous playback is
-also not guaranteed on every network/target combination.
 
 The package is not a replacement for a Microsoft-signed production driver and
 is not a claim of Diretta certification. It is a personal research build.
@@ -86,7 +80,7 @@ is not a claim of Diretta certification. It is a personal research build.
    that copy is only the installer source. If a shortcut was not created, use
    the installed copy at `%ProgramFiles%\OpenAudio\Bridge\OpenAudioBridgeControl.exe`.
 6. Select the Ethernet interface, select the intended target, choose `Music`
-   or experimental `Video`, and click **Apply**.
+   or `Video`, and click **Apply**.
 7. In Windows Sound settings, select **Speakers (OpenAudio Bridge)** as the
    output for the application being tested.
 
