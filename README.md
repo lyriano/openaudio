@@ -2,7 +2,7 @@
 
 ## Download
 
-Download the beta package from [OpenAudioBridge-v0.012.zip](https://github.com/lyriano/openaudio/releases/download/v0.012/OpenAudioBridge-v0.012.zip).
+Download the package from [OpenAudioBridge-v0.012.zip](https://github.com/lyriano/openaudio/releases/download/v0.012/OpenAudioBridge-v0.012.zip).
 
 Always extract the complete ZIP; do not run only a file from `app\`.
 
@@ -22,7 +22,7 @@ Host SDK and protocol.
 
 ## What it does
 
-The beta exposes an **OpenAudio Bridge** Windows playback endpoint. Applications
+The **OpenAudio Bridge** Windows playback endpoint supports applications
 such as Spotify, TIDAL, YouTube in a browser, Foobar2000, and other WASAPI
 applications can select that endpoint. The audio path is:
 
@@ -51,7 +51,7 @@ Diretta ASIO as the output path for each application.
 - **Bit-perfect priority:** the bridge applies no software volume processing or
   sample attenuation. Adjust listening level at the DAC or amplifier.
 
-## Beta status and important limits
+## Status and important limits
 
 Audio playback currently uses an intentional **approximately 3–4 second
 pre-buffer** before sound begins. This startup delay is part of the current
@@ -90,7 +90,7 @@ is not a claim of Diretta certification. It is a personal research build.
 
 If Windows blocks this test driver, disable **Secure Boot** in the computer's
 **BIOS/UEFI settings**, save the change, and restart Windows. Turn Secure Boot
-on again after removing the beta driver.
+on again after removing the test driver.
 
 After installation, do **not** reinstall or run Test Mode again on every boot.
 Open **OpenAudio Bridge** from the Start menu or desktop shortcut, then select
@@ -115,9 +115,9 @@ again. The package never silently changes Test Mode or reboots the machine.
 OpenAudio Bridge was built and tested against a locally supplied Diretta Host
 SDK 1.49.x.
 
-This beta is offered for **personal, non-commercial research and testing**.
+This software is offered for **personal, non-commercial research and testing**.
 It is not sold, licensed as a commercial product, or supported as a production
-audio driver. See [`BETA_TERMS.md`](BETA_TERMS.md) for the complete beta notice.
+audio driver. The applicable personal-use terms are included in this repository.
 
 ## Disclaimer
 
@@ -130,7 +130,7 @@ direct or indirect loss. Keep backups and test at a safe listening level.
 
 ## Repository policy
 
-This is a binary-only beta staging repository. No source code or SDK payload is
+This is a binary-only staging repository. No source code or SDK payload is
 intended to be published here. Release artifacts are test-signed and protected
 for internal qualification; production distribution requires a separate
 Microsoft-signed driver catalog, production Authenticode certificates, and a
