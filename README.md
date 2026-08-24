@@ -6,6 +6,8 @@ Download the beta package from [OpenAudioBridge-v0.012.zip](https://github.com/l
 
 Always extract the complete ZIP; do not run only a file from `app\`.
 
+![OpenAudio Bridge](openaudio.png)
+
 ![OpenAudio Bridge](OBA.png)
 
 OpenAudio Bridge is a software project that sends audio from Spotify, TIDAL,
