@@ -1,7 +1,5 @@
 # OpenAudio Bridge
 
-**Binary beta — version 0.004**
-
 ## Download
 
 Download the beta package from [OpenAudioBridge-v0.012.zip](https://github.com/lyriano/openaudio/releases/download/v0.012/OpenAudioBridge-v0.012.zip).
